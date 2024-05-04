@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TV Series</title>
+<style>
+  .blue-background {
+    background-color: rgb(125, 196, 243);
+    color: white;
+  }
+  .italic {
+    font-style: italic;
+  }
+
+.name-cell {
+  color:  rgb(125, 196, 243); /* Cambia 'green' por el color que desees */
+}
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="col-6">
+    <h1 class="blue-background italic">TV Series</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4 blue-background"> # </th>
+          <th class="h4 blue-background"> Name </th>
+          <th class="h4 blue-background"> Channel </th>
+          <th class="h4 blue-background"> Seasons </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of peliculas">
+          <td>{{c.id}}</td>
+          <td>{{c.name}}</td>
+          
+          <td>{{c.channel}}</td>
+          <td>{{c.seasons}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h2 class="h4 container-fluid">Promedio de Temporadas = {{promedio}}</h2>
+
+
+
+</body>
+</html>
+
